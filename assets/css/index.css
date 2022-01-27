@@ -26,9 +26,14 @@ tbody tr{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: 1px solid #4a595b00;
 }
 tbody tr:nth-child(2n){
     background-color: #4a595b59;
+}
+tbody tr:hover{
+    border: 1px dashed #4a595b;
 }
 
 tbody td{
