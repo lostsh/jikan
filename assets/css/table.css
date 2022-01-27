@@ -50,6 +50,6 @@ tbody td:nth-last-child(1){
 }
 
 table img{
-    width: 15vh;
+    width: min(15vh, 15vw);
     height: auto;
 }
