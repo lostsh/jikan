@@ -228,6 +228,10 @@ footer a:hover{
 .grey{
     color: #4a595b;
 }
+::selection{
+    background-color: #a7cdcf;
+    color: #0d1015;
+}
 
 
 /* 
