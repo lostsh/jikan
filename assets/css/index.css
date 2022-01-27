@@ -1,0 +1,50 @@
+/* 
+    ╔════════════════════════════╗ 
+    ║           Table            ║
+    ╚════════════════════════════╝
+*/
+table, table *{
+    border-radius: 8px;
+}
+table,tbody{
+    display: flex;
+    flex-direction: column;
+}
+table tbody tr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+thead tr{
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    border-bottom: 1px solid #4a595b;
+}
+
+tbody tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+tbody tr:nth-child(2n){
+    background-color: #4a595b59;
+}
+
+tbody td{
+    display: flex;
+    justify-content: center;
+
+    margin: 1vh 1vw;
+}
+tbody td:nth-child(1){
+    justify-content: start;
+}
+tbody td:nth-last-child(1){
+    justify-content: end;
+}
+
+table img{
+    width: 15vh;
+    height: auto;
+}

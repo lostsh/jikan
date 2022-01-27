@@ -34,7 +34,7 @@ header{
     justify-content: space-evenly;
 }
 header #img{
-    background-image: url('../img/header.png');
+    background-image: url('../img/globe.png');
     background-position: center;
     background-size: 150px 150px;
 
@@ -43,7 +43,13 @@ header #img{
     height: 150px;
 
     transition-duration: 1s;
+}
+header #img img{
+    border: 1px solid #4a595b;
+    border-radius: 100%;
 
+    width: 150px;
+    height: 150px;
 }
 header:hover #img{
     filter: blur(3px);
@@ -140,6 +146,9 @@ nav a:hover:after{
 */
 main{
     grid-area: main;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
 
     border-radius: 8px;
 
