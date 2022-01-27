@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template: "header header header" 1fr
+                    "nav main main" 6fr
+                    "footer footer footer" 0.5fr;
+    grid-template-columns: 1fr 6fr;
+
+
+    background-color: #0d1015;
+    color: #a7cdcf;
+    font-family: 'united sans medium', monospace;
+
+    background-image: url('../img/dotted-back.svg');
+    background-size: 200px 200px;
+}
+
+/* 
+    ╔════════════════════════════╗ 
+    ║           Header           ║
+    ╚════════════════════════════╝
+*/
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header #img{
+    background-image: url('../img/header.png');
+    background-position: center;
+    background-size: 150px 150px;
+
+    margin: 25px 25px;
+    width: 150px;
+    height: 150px;
+
+    transition-duration: 1s;
+
+}
+header:hover #img{
+    filter: blur(3px);
+    transition-duration: 1s;
+}
+header h1{
+    text-align: center;
+    width: calc(100vw - 200px);
+}
+
+/* 
+    ╔════════════════════════════╗ 
+    ║          Nav Menu          ║
+    ╚════════════════════════════╝
+*/
+nav{
+    grid-area: nav;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-family: 'united sans medium', monospace;
+    font-weight: bold;
+    font-size: large;
+
+    background-color: #0d1015;
+    border-radius: 0 8px 8px 0;
+    /*
+    border: 1px dashed #dc2b2b;
+    */
+    border: 1px dashed #4a595b;
+    border-left: 0;
+    /*
+    border-top: 1px solid #dc2b2b;
+    border-bottom: 1px solid #dc2b2b;
+    */
+}
+#menu:hover{
+    border-style: solid;
+}
+#menu :nth-child(1):hover{
+    background-image: url('../img/dotted-back.svg');
+    background-size: 125px 125px;
+    transition: ease 0.4s;
+}
+#menu :nth-child(1):hover:after{
+    transition: ease 0.4s;
+}
+#menu hr{
+    width: 80%;
+    transition: ease 2s;
+}
+#menu hr:hover{
+    width: 40%;
+    transition: ease 2s;
+}
+#menu a{
+    cursor: crosshair;
+    border-radius: 8px 8px 0 0;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4a595b;
+
+    padding: 0.7vh 2vw 0.7vh 2vw;
+    margin: 1vh 1vw 1vh 1vw;
+    position: relative;
+}
+nav a:after{    
+    background: #4a595b;
+    
+    display: block;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    
+    position: absolute;
+    left: 50%;
+    
+    content: "";
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+nav a:hover:after{ 
+    width: 100%; 
+    left: 0; 
+}
+
+/* 
+    ╔════════════════════════════╗ 
+    ║           Main             ║
+    ╚════════════════════════════╝
+*/
+main{
+    grid-area: main;
+
+    border-radius: 8px;
+
+    /*
+    background-image: url('../img/dotted-back.svg');
+    background-size: 200px 200px;
+    border: 1px solid #dc2b2b;*/
+    margin: 0 1vw;
+    background-color: #0d1015;
+    border-radius: 8px;
+    /*
+    border-left: 1px dashed #dc2b2b;
+    border-right: 1px dashed #dc2b2b;
+    */
+    border-left: 1px dashed #4a595b;
+    border-right: 1px dashed #4a595b;
+}
+main:hover{
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+main>*{
+    margin: 1vh 1vw;
+}
+
+/* 
+    ╔════════════════════════════╗ 
+    ║           Footer           ║
+    ╚════════════════════════════╝
+*/
+footer{
+    grid-area: footer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: small;
+    /*
+    border-radius: 8px 8px 0 0;
+    border-top: 1px solid #dc2b2b;
+    */
+}
+footer>*{
+    margin: 0 4vw;
+}
+footer a{
+    text-decoration: underline #dc2b2b;
+    color: #a7cdcf;
+}
+footer a:hover{
+    text-decoration: none;
+}
+
+/* 
+    ╔════════════════════════════╗ 
+    ║        Layouts class       ║
+    ╚════════════════════════════╝
+*/
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}
+.text-center{
+    display: flex;
+    justify-content: center;
+}
+.text-left{
+    float: left;
+}
+.text-right{
+    float: right;
+}
+.grey{
+    color: #4a595b;
+}
+
+
+/* 
+    ╔════════════════════════════╗ 
+    ║           Fonts            ║
+    ╚════════════════════════════╝
+*/
