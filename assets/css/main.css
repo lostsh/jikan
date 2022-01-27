@@ -238,3 +238,55 @@ footer a:hover{
     ║           Fonts            ║
     ╚════════════════════════════╝
 */
+
+
+/* 
+    ╔════════════════════════════╗ 
+    ║        Media Querie        ║
+    ╚════════════════════════════╝
+*/
+@media screen and (max-width: 375px) and (orientation: portrait) {
+    body{
+        grid-template: "header header" 1fr
+                        "nav nav" 3fr
+                        "main main" 6fr 
+                        "footer footer" 1fr;
+        grid-template-columns: 1fr 6fr;
+    }
+    header #img{
+        background-size: 100%;
+
+        margin: 10px 10px;
+        width: 50px;
+        height: 50px;
+    }
+    header #img img{
+        width: 50px;
+        height: 50px;
+    }
+    main{
+        margin-top: 5px;
+        border: 1px solid #4a595b;
+    }
+    nav{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+        border-radius: 8px;
+        border: 1px solid #4a595b;
+        margin: 0 5px;
+    }
+    nav hr{
+        display: none;
+    }
+    #menu a{
+        border-radius: 8px;
+        border: 1px dashed #4a595b;
+        margin: 0 5px;
+    }
+    #menu a:nth-child(1){
+        text-align: center;
+        width: 90%;
+    }
+}
