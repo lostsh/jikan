@@ -10,6 +10,7 @@
 
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/contact.css" />
 </head>
 
 <body>
@@ -29,15 +30,86 @@
     </nav>
 
     <main>
-
-        <!--
-        <article>
-            <h2>Temus fugit.</h2>
+        <form action="mailto:time@jikan.com?subject=Time%20contac&body=" method="post" enctype="text/plain">
             <div>
-                <p>Bonjour et bienvenue à <span class="grey">Jikan</span>, le temps fuit.</p>
+                <label for="date">Current date</label>
+                <input type="date" name="date" id="date" required="">
             </div>
-        </article>
-        -->
+            <div>
+                <section>
+                    <h2>Client informations</h2>
+                    <div>
+                        <!--<label for="surname">Name</label>-->
+                        <input type="text" name="surname" id="surname" placeholder="First name" required="">
+                    </div>
+                    <div>
+                        <!--<label for="firstname">Family name</label>-->
+                        <input type="text" name="firstname" id="firstname" placeholder="Family name" required="">
+                    </div>
+                    <div>
+                        <!--<label for="mail">e-mail</label>-->
+                        <input type="email" name="mail" id="mail" placeholder="User@mail.com" required="">
+                    </div>
+                    <div>
+                        <label>Gender:</label>
+                        <p>
+                            <input type="radio" id="gen1" name="gender" value="nonbinary" checked>
+                            <label for="gen1">Non binary</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="gen2" name="gender" value="first">
+                            <label for="gen2">First</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="gen3" name="gender" value="second">
+                            <label for="gen3">Second</label>
+                        </p>
+                    </div>
+                    <div>
+                        <label for="birthDate">Birth date:</label>
+                        <input type="date" name="birthDate" id="birthDate" required="">
+                    </div>
+                </section>
+                <section>
+                    <h2>Contact information</h2>
+                    <div>
+                        <label for="category">Product:</label>
+                        <select id="category">
+                            <optgroup label="Self">
+                                <option>Chick</option>
+                                <option>Chicken</option>
+                                <option>Hen</option>
+                                <option>Raven</option>
+                                <option>Parrot</option>
+                            </optgroup>
+                            <optgroup label="Relative">
+                                <option>Blue</option>
+                                <option>Orange</option>
+                                <option>Pink</option>
+                                <option>Red</option>
+                                <option>Chased</option>
+                            </optgroup>
+                            <optgroup label="Intricated">
+                                <option>Apple</option>
+                                <option>Cherry</option>
+                                <option>Orange</option>
+                                <option>Strawberry</option>
+                                <option>Pac-man</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" name="subject" id="subject" placeholder="Contact subject" required="">
+                    </div>
+                    <div>
+                        <textarea type="text" name="content" id="content" placeholder="Message" required="" rows="10" cols="66"></textarea>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <input type="submit" value="Send mail">
+            </div>
+        </form>
     </main>
 
     <footer>
