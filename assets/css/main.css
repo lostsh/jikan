@@ -289,4 +289,12 @@ footer a:hover{
         text-align: center;
         width: 90%;
     }
+
+    /* Small exception : table style may not be there 
+     * just a fix for apple devices with auto height fail
+     */
+    table img{
+        width: min(15vh, 15vw);
+        height: min(15vh, 15vw);
+    }
 }
