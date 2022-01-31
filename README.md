@@ -1,13 +1,16 @@
 # jikan
 
-## 
+## Configuration
+
+To lighten the site, I created and host an API allowing to put the images of the site online.
 
 :warning: *Need internet to load pictures files.*
 
-### This is the light version, so every media are host online, you may experments some slow loadings.
+### This is the light version, so every media are hosted online, you may experments some slowdowns.
 
+API and doc available at [this address](https://lostsh.github.io/jikan-media/)
 
-## Annexe
+## Annex
 
 ```js
 /**
