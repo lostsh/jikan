@@ -1,5 +1,9 @@
 # jikan
 
+| HTML | CSS | JS |
+|:----:|:---:|:--:|
+| Native 5.0  | 3   | Vanilla 2015 | 
+
 ## Configuration
 
 To lighten the site, I created and host an API allowing to put the images of the site online.
@@ -8,10 +12,16 @@ To lighten the site, I created and host an API allowing to put the images of the
 
 ### This is the light version, so every media are hosted online, you may experments some slowdowns.
 
-API and doc available at [this address](https://lostsh.github.io/jikan-media/)
+API and doc available at [this address](https://lostsh.github.io/jikan-media/).
+This cute API is handmade with love by me, so take a look at the doc it's cool.
+
+## Recommendations
+
+For the last page, since it's the light version, and fruits gif are pretty heavy, 
+you need to stay a bit longer on each row to let you browser download the glitch gif.
 
 ## Annex
-
+Old and first version of the js glitch handler. Now the script loads glitch effect on row hover, the logic is pretty cool you can take a look at it `assets/js/main.js`.
 ```js
 /**
  * This function replace normal pic with glitched
@@ -42,3 +52,9 @@ function main(){
 }
 ```
 *a bit of ugly js ...*
+
+
+<br>
+
+### <center>Thanks for reading ~</center>
+## <center>ᓚᘏᗢ</center>
