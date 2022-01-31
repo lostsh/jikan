@@ -31,4 +31,4 @@ function main(){
     }));
 }
 ```
-*a bit of shitty ugly js ...*
+*a bit of ugly js ...*
