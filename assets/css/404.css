@@ -1,0 +1,76 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main p{
+    font-size: 20em;
+    font-weight: 900;
+    font-family: 'Cyber', monospace;
+}
+
+/* 
+    ╔════════════════════════════╗ 
+    ║      MY OLD UGLY ANIM      ║
+    ╚════════════════════════════╝
+*/
+main p{
+    animation: glitch 1s linear infinite;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(13deg); 
+    }
+  }
+  
+  main p:before, main p:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  main p:before{
+    animation: glitchTop 1s linear infinite;
+    color: #a7cdcf;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  main p:after{
+    animation: glitchBotom 1.5s linear infinite;
+    color: #a7cdcf;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
