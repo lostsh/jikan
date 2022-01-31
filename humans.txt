@@ -1,0 +1,52 @@
+/*
+         2022 - 2023
+╔═════════════════════════════╗ 
+║   ©  BY: lostsh ᓚᘏᗢ        ║▒
+╟─────────────────────────────╢▒
+║ all or part of the system   ║▒
+║ is confidential and falls   ║▒
+║ under French personal data  ║▒
+║ protection law              ║▒
+╚═════════════════════════════╝▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+*/
+
+/*
+ * ╔════════════════════════╗ 
+ * ║         TEAM           ║▒
+ * ╚════════════════════════╝▒
+ *  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ */
+Product Owner    : lostsh
+Scrum Master     : lostsh
+Development Team
+- Tests          : lostsh
+- Archi          : lostsh
+- analyse        : lostsh
+
+/*
+ * ╔════════════════════════╗ 
+ * ║        CONTACT         ║▒
+ * ╚════════════════════════╝▒
+ *  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ */
+(
+    "Yohann Vernhes":
+    [
+        "github" : "github.com/lostsh",
+        "twitter" : "twitter.com/l0stsh"
+    ]
+)
+
+/*
+ * ╔════════════════════════╗ 
+ * ║        THANKS          ║▒
+ * ╚════════════════════════╝▒
+ *  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ */
+A specific thank you to the professor who corrects my work, 
+if he takes the trouble to read these files. 
+I am aware that this must take a considerable amount of time, 
+and I am grateful that this time has been granted to me, 
+especially since I myself have spent my time creating this site.
+So honestly thank you
