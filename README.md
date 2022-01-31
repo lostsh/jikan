@@ -1,7 +1,11 @@
 # jikan
 
-## Annexe
+| HTML | CSS | JS |
+|:----:|:---:|:--:|
+| Native 5.0  | 3   | Vanilla 2015 | 
 
+## Annex
+Old and first version of the js glitch handler. Now the script loads glitch effect on row hover, the logic is pretty cool you can take a look at it `assets/js/main.js`.
 ```js
 /**
  * This function replace normal pic with glitched
@@ -32,3 +36,9 @@ function main(){
 }
 ```
 *a bit of ugly js ...*
+
+
+<br>
+
+### <center>Thanks for reading ~</center>
+## <center>ᓚᘏᗢ</center>

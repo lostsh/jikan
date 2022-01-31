@@ -1,0 +1,17 @@
+main{
+    font-family: 'Cyber', monospace;
+}
+main h2{
+    font-size: xx-large;
+
+    margin-top: 3em;
+}
+main p{
+    font-size: x-large;
+
+    margin: 0.7em 0;
+}
+
+main article div{
+    margin: 1em 0 0 0;
+}
