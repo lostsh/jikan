@@ -32,6 +32,8 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+
+    font-family: 'Cyber', monospace;
 }
 header #img{
     background-image: url('../img/globe.png');
@@ -55,9 +57,27 @@ header:hover #img{
     filter: blur(3px);
     transition-duration: 1s;
 }
+header:hover h2{
+    opacity: 1;
+    transition: ease 0.4s;
+}
 header h1{
     text-align: center;
+    font-size: 3.5em;
     width: calc(100vw - 200px);
+}
+header h2{
+    background-color: #dc2b2b;
+
+    text-align: center;
+    margin-left: calc(calc(100vw - 200px) / 5);
+
+    width: fit-content;
+    padding: 0 3rem;
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+
+    opacity: 0.75;
+    transition: ease 0.4s;
 }
 
 /* 
@@ -238,7 +258,21 @@ footer a:hover{
     ║           Fonts            ║
     ╚════════════════════════════╝
 */
-
+@font-face {
+    font-family:'Cyber';
+    style:normal;
+    weight:400;
+    stretch:100;
+    src:url('../fonts/ChakraPetch-Medium.ttf') format("truetype");
+}
+/*
+@font-face {
+  font-family:'Chakra Petch';
+  font-style:normal;
+  font-weight:400;
+  src:url(http://fonts.gstatic.com/s/chakrapetch/v8/cIf6MapbsEk7TDLdtEz1BwkWn6pg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}*/
 
 /* 
     ╔════════════════════════════╗ 
