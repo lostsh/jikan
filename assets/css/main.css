@@ -17,7 +17,7 @@ body{
     color: #a7cdcf;
     font-family: 'united sans medium', monospace;
 
-    background-image: url('../img/dotted-back.svg');
+    background-image: url('https://lostsh.github.io/jikan-media/dotted-back.svg');
     background-size: 200px 200px;
 }
 
@@ -113,7 +113,7 @@ nav{
     border-style: solid;
 }
 #menu :nth-child(1):hover{
-    background-image: url('../img/dotted-back.svg');
+    background-image: url('https://lostsh.github.io/jikan-media/dotted-back.svg');
     background-size: 125px 125px;
     transition: ease 0.4s;
 }

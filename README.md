@@ -1,5 +1,12 @@
 # jikan
 
+## 
+
+:warning: *Need internet to load pictures files.*
+
+### This is the light version, so every media are host online, you may experments some slow loadings.
+
+
 ## Annexe
 
 ```js
