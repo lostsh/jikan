@@ -12,7 +12,10 @@ table,tbody{
 }
 table tbody tr{
     display: grid;
+    /*
     grid-template-columns: repeat(4, 1fr);
+    */
+    grid-template-columns: repeat(5, 1fr);
 }
 
 thead tr{
@@ -60,6 +63,21 @@ table img{
     width: min(15vh, 15vw);
     height: auto;
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+    table tbody tr{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    table tbody td:nth-child(3){
+        justify-content: end;
+    }
+    table tbody td:nth-child(4){
+        justify-content: start;
+    }
+    table img{
+        width: min(15vh, 15vw);
+        height: min(15vh, 15vw);
+    }
+}
 
 /* 
     ╔════════════════════════════╗ 
@@ -68,8 +86,10 @@ table img{
 */
 
 .buttons{
+    /*
     position: static;
     transform: translateX(-100%);
+    */
 
     width: min(15vh, 15vw);
     height: min(15vh, 15vw);
@@ -80,16 +100,20 @@ table img{
     align-items: center;
 
     /*
-    display: none;
-    */
     visibility: hidden;
+    */
 }
 tbody tr:hover .buttons{
     visibility: visible;
 }
-.buttons button{
+tbody tr:nth-child(2n) td button{
     background-color:  #0d1015;
+}
+.buttons button{
+    background-color: #4a595b59;
+    /*
     opacity: 0.75;
+    */
     border-radius: 8px;
 	border: none;
     color: #a7cdcf;
@@ -99,5 +123,17 @@ tbody tr:hover .buttons{
     height: 30%;
 }
 .buttons button:hover{
+    /*
     opacity: 0.85;
+    */
+}
+
+@media screen and (max-width: 375px) and (orientation: portrait) {
+    .buttons{
+        width: auto;
+    }
+    .buttons button{
+        width: calc(min(15vh, 15vw) * 0.75);
+        height: auto;
+    }
 }

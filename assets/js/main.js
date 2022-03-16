@@ -39,67 +39,27 @@ function main(){
 
 
     document.addEventListener("DOMContentLoaded", function() {
-        basketFake();
+        //basketFake();
     });
 }
 
 function basketFake(){
-    var order = new Map();
-    var stock = new Map();
     console.log("[+]\tStart faking the basket presence");
 
     var rows = Array.from(document.querySelectorAll("table tr"));
     // shift the row without picture
     rows.shift();
 
-    // create stock
-    //rows.forEach( r => stock.set(new Object(r.querySelector('img').getAttribute('src')), 30) );
     for(var r of rows){
         var p = new Object(r);
         p.init(30);
-        //stock.set(p, 30);
-
-        /*
-        var btn = r.querySelectorAll('button');
-        console.log(btn)
-        btn[0].addEventListener("click", test);*/
-        //addBasketField(r);
-        //showOrderStock(rows, order, stock);
     }
-
-    /*
-    console.log(stock);
-
-    for (const [key, value] of stock) {
-        console.log(key.getName());
-        console.log(value);
-    }
-    */
 }
 
-/*
-function test(){
-    console.log("test");
-}
-function addBasketField(row){
-    console.log("Adding buttons");
-    var buttons = document.createElement("div");
-    buttons.className = "buttons"
-    var less = document.createElement("button");
-    var more = document.createElement("button");
-    less.textContent = "-";
-    more.textContent = "+";
-    buttons.appendChild(less);
-    buttons.appendChild(more);
-    //put the buttons on the page
-    row.querySelector("td").appendChild(buttons);
-
-    console.log("Adding order stock column");
-    var col = document.createElement("td");
-    col.className = "order stock";
-    row.appendChild(col);
-}
-*/
+/**
+ * This object contains the row manipulate product stock
+ * @param {*} row html element <tr> containing a product
+ */
 function Object(row){
 
     this.row = row;
@@ -138,6 +98,9 @@ function Object(row){
         return this.name;
     }
 
+    /**
+     * Update the order / stock column display
+     */
     this.update = function(){
         this.row.querySelector("td:nth-last-child(1)").textContent = this.order+"/"+(this.stock-this.order);
     }
@@ -151,23 +114,8 @@ function Object(row){
         if(that.order-1 >= 0) that.order--;
         that.update();
     }
-}
 
-/*
-function showOrderStock(rows, order, stock){
-    //update stock and order values
-    for(var r of rows){
-        console.log(getRowObject(r, stock));
-        r.querySelector("td:nth-last-child(1)").textContent = "0/0";
+    this.zoom = function(){
+        //zoom into the picture
     }
 }
-
-function getRowObject(row, stock){
-    var obj = row.querySelector('img').getAttribute('src');
-    obj = obj.substring(obj.lastIndexOf('/')+1, obj.lastIndexOf('.'));
-    for(var o of stock.keys()){
-        if(o.getName() == obj) return o;
-    }
-    return null;
-}
-*/
