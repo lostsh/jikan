@@ -12,7 +12,7 @@ table,tbody{
 }
 table tbody tr{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 thead tr{
@@ -45,11 +45,59 @@ tbody td{
 tbody td:nth-child(1){
     justify-content: start;
 }
-tbody td:nth-last-child(1){
+tbody td:nth-last-child(1), tbody td:nth-last-child(2){
     justify-content: end;
+}
+
+.order, .stock{
+    display: none;
+}
+tbody tr:hover .order{
+    display: flex;
 }
 
 table img{
     width: min(15vh, 15vw);
     height: auto;
+}
+
+/* 
+    ╔════════════════════════════╗ 
+    ║          Button            ║
+    ╚════════════════════════════╝
+*/
+
+.buttons{
+    position: static;
+    transform: translateX(-100%);
+
+    width: min(15vh, 15vw);
+    height: min(15vh, 15vw);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /*
+    display: none;
+    */
+    visibility: hidden;
+}
+tbody tr:hover .buttons{
+    visibility: visible;
+}
+.buttons button{
+    background-color:  #0d1015;
+    opacity: 0.75;
+    border-radius: 8px;
+	border: none;
+    color: #a7cdcf;
+    font-size: xx-large;
+
+    width: 40%;
+    height: 30%;
+}
+.buttons button:hover{
+    opacity: 0.85;
 }
