@@ -36,11 +36,11 @@ function main(){
         .getAttribute('src')
         .replace("glitch", "normal");
     }));
+    
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-        basketFake();
-    });
+    //start faking basket presence
+    basketFake();
 }
 
 function basketFake(){
