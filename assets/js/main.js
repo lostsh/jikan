@@ -39,7 +39,7 @@ function main(){
 
 
     document.addEventListener("DOMContentLoaded", function() {
-        //basketFake();
+        basketFake();
     });
 }
 
@@ -72,6 +72,7 @@ function Object(row){
         this.order = 0;
 
         //adding buttons
+        var colBtn = document.createElement("td");
         var buttons = document.createElement("div");
         buttons.className = "buttons"
         var less = document.createElement("button");
@@ -82,8 +83,9 @@ function Object(row){
         more.textContent = "+";
         buttons.appendChild(less);
         buttons.appendChild(more);
+        colBtn.appendChild(buttons);
         //put the buttons on the page
-        this.row.querySelector("td").appendChild(buttons);
+        this.row.insertBefore(colBtn, row.querySelector(":nth-child(2)"));
 
         //adding order column
         var col = document.createElement("td");
