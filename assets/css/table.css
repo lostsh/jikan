@@ -126,6 +126,7 @@ tbody tr:nth-child(2n) td button{
     /*
     opacity: 0.85;
     */
+    border: 1px solid #4a595b;
 }
 
 @media screen and (max-width: 375px) and (orientation: portrait) {
