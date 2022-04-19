@@ -44,7 +44,8 @@
                     include_once "../controller/Controller.php";
                     $c = Controller::getController();
 
-                    $c->setCategorie($_GET['cat']!=null?$_GET['cat']:"birds");
+                    $cat = htmlspecialchars($_GET['cat']);
+                    $c->setCategorie($cat!=null?$cat:"birds");
 
                     // display product rows
                     foreach($c->getCurrentProducts() as $product){
