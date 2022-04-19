@@ -23,12 +23,12 @@
     </header>
 
     <nav id="menu">
-        <a href="../index.html">Jikan</a>
+        <a href="../index.php">Jikan</a>
         <hr>
-        <a href="birds.html">Self</a>
-        <a href="ghosts.html">Relative</a>
-        <a href="fruits.html">Intricated</a>
-        <a href="contact.html">Contact</a>
+        <a href="products.php?cat=birds">Self</a>
+        <a href="products.php?cat=ghosts">Relative</a>
+        <a href="products.php?cat=fruits">Intricated</a>
+        <a href="contact.php">Contact</a>
     </nav>
 
     <main>
@@ -48,7 +48,6 @@
                     $c->setCategorie($cat!=null?$cat:"birds");
 
                     // display product rows
-                    //foreach($c->getCurrentProducts() as $product) echo($product);
                     array_map(function($p){ echo($p); }, $c->getCurrentProducts());
                 ?>
             </tbody>

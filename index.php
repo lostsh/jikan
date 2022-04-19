@@ -25,18 +25,18 @@
     </header>
 
     <nav id="menu">
-        <a href="index.html">Jikan</a>
+        <a href="index.php">Jikan</a>
         <hr>
-        <a href="pages/birds.html">Self</a>
-        <a href="pages/ghosts.html">Relative</a>
-        <a href="pages/fruits.html">Intricated</a>
-        <a href="pages/contact.html">Contact</a>
+        <a href="view/products.php?cat=birds">Self</a>
+        <a href="view/products.php?cat=ghosts">Relative</a>
+        <a href="view/products.php?cat=fruits">Intricated</a>
+        <a href="view/contact.php">Contact</a>
     </nav>
 
     <main>
         <?php
-            include_once "controller/Controller.php";
-            $_SESSION["controller"] = Controller::getController('products.json');
+            //include_once "controller/Controller.php";
+            //$_SESSION["controller"] = Controller::getController('products.json');
         ?>
         <article>
             <h2>Tempus fugit.</h2>
