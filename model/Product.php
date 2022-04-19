@@ -27,9 +27,15 @@ class Product extends Salable{
 
     public function getDescription(){ return $this->description; }
 
+    /**
+     * Get the product under the form of a table row
+     */
     public function __toString(){
-        return "{Product : [Image : ".$this->url.
-        ", Description : ".$this->description.
-        ", Price : ".$this->getPrice()."]}";
+        return "
+        <tr>
+            <td><img src='".$this->url."' alt='Product figure'></td>
+            <td>".$this->description."</td>
+            <td>".$this->getPrice()." k$</td>
+        </tr>";
     }
 }
