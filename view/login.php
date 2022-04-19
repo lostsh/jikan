@@ -11,7 +11,7 @@
 
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/table.css" />
+    <link rel="stylesheet" href="../assets/css/login.css"/>
     <script src="../assets/js/main.js"></script>
 </head>
 
@@ -33,30 +33,32 @@
     </nav>
 
     <main>
-        
-        <table>
-            <thead>
-                <tr>
-                    <td colspan="3">Times plans</td>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    include_once "../controller/Controller.php";
-                    $c = Controller::getController();
+      <h1>Log-in ↻</h1>
+      <div class="login">
+        <img src="../assets/img/profil.png" alt="profil pic">
 
-                    $cat = htmlspecialchars($_GET['cat']);
-                    $c->setCategorie($cat!=null?$cat:"birds");
+        <form method="POST">
+          <div>
+            <input type="email" name="email" placeholder="User mail" required>
+          </div>
+          <div>
+            <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+          </div>
+          <!--<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >-->
+          <div>
+            <input type="submit" value="Log-in">
+          </div>
+        </form>
 
-                    // display product rows
-                    array_map(function($p){ echo($p); }, $c->getCurrentProducts());
-                ?>
-            </tbody>
-        </table>
+      </div>
 
+      <?php
+        if(isset($_POST['email']) && isset($_POST['password'])){
+            // TODO: Implement security controller
+            $_SESSION['user'] = "Henry";
+        }
+      ?>
     </main>
-
-    <popup-zoom></popup-zoom>
 
     <footer>
         <p>lostsh © 2022-2023</p>

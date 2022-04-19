@@ -1,0 +1,50 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login:focus-within img{
+    filter: blur(3px);
+    transition-duration: 1s;
+}
+img{
+    width: 15vw;
+    height: auto;
+}
+
+
+form{
+    margin: 4vh 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form>*{
+    margin: 2vh 0;
+}
+
+input{
+    border: 1px solid #a7cdcf;
+    border-radius: 8px;
+    line-height: 2.5em;
+
+    background-color: #0d1015;
+    font-family: 'fira code', monospace;
+    color: #a7cdcf;
+    text-align: center;
+}
+input:invalid {
+    border: 1px solid #dc2b2b;
+}
+input:valid {
+    border: 1px solid #a7cdcf;
+}
+input[type=submit]:hover{
+    background-color: #a7cdcf;
+    color: #0d1015;
+}
+
+footer{
+    display: none;
+}

@@ -26,6 +26,7 @@
 
     <nav id="menu">
         <a href="index.php">Jikan</a>
+        <?= $_SESSION['user']==null?"<a href='view/login.php'>Login</a>":"<a href='view/logout.php'>Logout</a>" ?>
         <hr>
         <a href="view/products.php?cat=birds">Self</a>
         <a href="view/products.php?cat=ghosts">Relative</a>

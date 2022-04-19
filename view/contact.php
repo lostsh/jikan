@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="EN">
+<?php session_start(); ?>
 
 <head>
     <meta charset="utf-8" />
@@ -22,6 +23,7 @@
 
     <nav id="menu">
         <a href="../index.php">Jikan</a>
+        <?= $_SESSION['user']==null?"<a href='/view/login.php'>Login</a>":"<a href='/view/logout.php'>Logout</a>" ?>
         <hr>
         <a href="products.php?cat=birds">Self</a>
         <a href="products.php?cat=ghosts">Relative</a>
