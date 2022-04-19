@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="EN">
+<?php session_start(); ?>
 
 <head>
     <meta charset="utf-8" />
@@ -33,6 +34,10 @@
     </nav>
 
     <main>
+        <?php
+            include_once "controller/Controller.php";
+            $_SESSION["controller"] = Controller::getController('products.json');
+        ?>
         <article>
             <h2>Tempus fugit.</h2>
             <div>

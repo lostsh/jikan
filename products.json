@@ -1,0 +1,85 @@
+{
+    "products": {
+        "birds": [
+            {
+                "image": "https://lostsh.github.io/jikan-media/birds/normal/chick.gif",
+                "description": "One o'clock",
+                "price": 17
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/birds/normal/chicken.gif",
+                "description": "Twelve o'clock",
+                "price": 142
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/birds/normal/hen.gif",
+                "description": "Twenty-four hours",
+                "price": 200
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/birds/normal/raven.gif",
+                "description": "Forty eight hours",
+                "price": 500
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/birds/normal/parrot.gif",
+                "description": "One hundred and twenty eight hours",
+                "price": 666
+            }
+        ],
+        "ghosts":[
+            {
+                "image": "https://lostsh.github.io/jikan-media/ghosts/normal/blue.gif",
+                "description": "One interaction",
+                "price": 17
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/ghosts/normal/orange.gif",
+                "description": "Two interactions",
+                "price": 142
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/ghosts/normal/pink.gif",
+                "description": "Seven interactions",
+                "price": 200
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/ghosts/normal/red.gif",
+                "description": "Thirteen interactions",
+                "price": 500
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/ghosts/normal/chase.gif",
+                "description": "Time relative number of interactions.",
+                "price": 666
+            }
+        ],
+        "fruits":[
+            {
+                "image": "https://lostsh.github.io/jikan-media/fruits/normal/apple.gif",
+                "description": "A day",
+                "price":990
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/fruits/normal/cherry.gif",
+                "description": "One week",
+                "price": 6.930
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/fruits/normal/orange.gif",
+                "description": "A month",
+                "price": 27.720
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/fruits/normal/strawberry.gif",
+                "description": "One year",
+                "price": 332.640
+            },
+            {
+                "image": "https://lostsh.github.io/jikan-media/fruits/normal/pac-man.gif",
+                "description": "You wake up when it suits you.",
+                "price": -666
+            }
+        ]
+    }
+}

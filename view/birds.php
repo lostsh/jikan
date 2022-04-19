@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="EN">
+<?php session_start(); ?>
 
 <head>
     <meta charset="utf-8" />
@@ -39,6 +40,29 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+                // Some tests : 
+                    /*
+                    require_once '../model/Product.php';
+                    $q = new Product(["image" => "../", "description" => "Descrrr", "price" => 8]);
+                    echo("q is : ");
+                    echo($q);*/
+
+                    include_once "../controller/Controller.php";
+                    $c = Controller::getController();
+
+                    //var_dump($c);
+                    echo("<br>US->>");
+                    //var_dump($c->products);
+                    echo("<<-SU<br>");
+
+                    $c->setCategorie("birds");
+
+                    foreach($c->getCurrentProducts() as $product){
+                        echo("<br>");
+                        echo($product);
+                    }
+                ?>
                 <tr>
                     <td><img src="https://lostsh.github.io/jikan-media/birds/normal/chick.gif" alt="Product figure"></td>
                     <!--<td><div class="buttons"><button>-</button><button>+</button></div></td>-->
