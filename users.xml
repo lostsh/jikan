@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+    <user>
+        <email>henry@choum.su</email>
+        <name>AtChoum</name>
+        <passwd>Pass Word</passwd>
+    </user>
+    <user>
+        <email>cal@mbou.rg</email>
+        <name>Nope</name>
+        <passwd>Pass cette fois</passwd>
+    </user>
+</users>

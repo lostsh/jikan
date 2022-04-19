@@ -17,6 +17,20 @@
 
 <body>
 
+    <?php
+        if(isset($_POST['email']) && isset($_POST['password'])){
+            include_once "../controller/Security.php";
+            $s = new Security("../users.xml");
+
+            $mail = htmlspecialchars($_POST['email']);
+            $pass = htmlspecialchars($_POST['password']);
+
+            $s->attemptoLogin($mail, $pass);
+
+            $_SESSION['user'] = $s->getUser('name');
+        }
+    ?>
+
     <header>
         <div><h2>時間</h2><h1>Jikan ↬</h1></div>
         <div id="img"><img src="../assets/img/globe.gif" alt="rotating globe"></div>
@@ -33,31 +47,23 @@
     </nav>
 
     <main>
-      <h1>Log-in ↻</h1>
-      <div class="login">
-        <img src="../assets/img/profil.png" alt="profil pic">
-
-        <form method="POST">
-          <div>
-            <input type="email" name="email" placeholder="User mail" required>
-          </div>
-          <div>
-            <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
-          </div>
-          <!--<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >-->
-          <div>
-            <input type="submit" value="Log-in">
-          </div>
-        </form>
-
-      </div>
-
-      <?php
-        if(isset($_POST['email']) && isset($_POST['password'])){
-            // TODO: Implement security controller
-            $_SESSION['user'] = "Henry";
-        }
-      ?>
+        <h1>Log-in ↻</h1>
+        <div class="login">
+            <img src="../assets/img/profil.png" alt="profil pic"> 
+            <form method="POST">
+                <?= $_SESSION['user']!=null?"<div>You are logged in as ".$_SESSION['user'].".</div>":"" ?>
+                <div>
+                    <input type="email" name="email" placeholder="User mail" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+                </div>
+                <!--<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >-->
+                <div>
+                    <input type="submit" value="Log-in">
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer>
