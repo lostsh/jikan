@@ -139,7 +139,7 @@ class popup extends HTMLElement{
     }
 
     customTemplate(template){
-        console.log(template);
+        //console.log(template);
         template.querySelector("#close").addEventListener("click", this.remove);
         template.querySelector(".zoom-background").addEventListener("click", this.remove);
         var that = this;
@@ -188,7 +188,7 @@ template.innerHTML = `
     <div class="zoom-background"></div>
     <div class="zoom">
         <div id="close"><div></div></div>
-        <img src="../assets/img/birds/normal/chicken.gif" alt="zoomed image">
+        <img src="https://lostsh.github.io/jikan-media/birds/normal/hen.gif" alt="zoomed image">
     </div>
 </div>
 `;
