@@ -48,9 +48,9 @@
                     $c->setCategorie($cat!=null?$cat:"birds");
 
                     // display product rows
-                    foreach($c->getCurrentProducts() as $product){
-                        echo($product);
-                    }
+                    //foreach($c->getCurrentProducts() as $product) echo($product);
+                    function show($p){ echo($p); }
+                    array_map('show', $c->getCurrentProducts());
                 ?>
             </tbody>
         </table>
