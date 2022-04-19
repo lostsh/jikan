@@ -23,7 +23,8 @@
             $s = new Security("../users.xml");
 
             $mail = htmlspecialchars($_POST['email']);
-            $pass = htmlspecialchars($_POST['password']);
+            $pass = md5(htmlspecialchars($_POST['password']));
+            // Pass Word || Pass cette fois
 
             $s->attemptoLogin($mail, $pass);
 
