@@ -29,4 +29,6 @@ class Controller{
 
     public function setCategorie(String $categ){ $this->categorie = $categ; }
     public function getCurrentProducts(){ return $this->products[$this->categorie]; }
+
+    public function get(String $cat, int $index){ return $this->products[$cat][$index]; }
 }
