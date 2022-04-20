@@ -27,21 +27,6 @@ class Controller{
         return self::$that;
     }
 
-    /*
-    public function getData(){
-        return $this->data;
-    }*/
-
     public function setCategorie(String $categ){ $this->categorie = $categ; }
     public function getCurrentProducts(){ return $this->products[$this->categorie]; }
-
-    /*
-    public function getPrevPage(){
-        return $this->previousPage;
-    }*/
-    /*
-    public function setPrevPage(String $prevPage = ""){
-        if( $prevPage != "" && $prevPage != $this->previousPage )
-            $this->previousPage = $prevPage;
-    }*/
 }

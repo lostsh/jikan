@@ -50,6 +50,9 @@
 
                     // display product rows
                     array_map(function($p){ echo($p); }, $c->getCurrentProducts());
+
+                    //page history
+                    $_SESSION['prevPage'] = $_SERVER['PHP_SELF']."?cat=".$cat;
                 ?>
             </tbody>
         </table>

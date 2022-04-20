@@ -18,6 +18,9 @@
 <body>
 
     <?php
+        //previous page
+        $_SESSION['prevPage'] = $_SERVER['PHP_SELF'];
+
         if(isset($_POST['email']) && isset($_POST['password'])){
             include_once "../controller/Security.php";
             $s = new Security("../users.xml");

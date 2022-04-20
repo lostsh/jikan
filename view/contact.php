@@ -32,6 +32,7 @@
     </nav>
 
     <main>
+        <?php $_SESSION['prevPage'] = $_SERVER['PHP_SELF']; ?>
         <form action="mailto:time@jikan.com?subject=Time%20contac&body=" method="post" enctype="text/plain">
             <div>
                 <label for="date">Current date</label>

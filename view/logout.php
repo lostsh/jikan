@@ -7,4 +7,4 @@ $c = Controller::getController();
 
 $_SESSION['user'] = null;
 
-header('Location: '.(true?"/":$c.getPrevPage()) );
+header('Location: '.(isset($_SESSION['prevPage'])?$_SESSION['prevPage']:"/") );

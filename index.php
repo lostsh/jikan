@@ -38,6 +38,8 @@
         <?php
             //include_once "controller/Controller.php";
             //$_SESSION["controller"] = Controller::getController('products.json');
+            //page history
+            $_SESSION['prevPage'] = $_SERVER['PHP_SELF'];
         ?>
         <article>
             <h2>Tempus fugit.</h2>
