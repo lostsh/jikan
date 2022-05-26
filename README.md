@@ -1,5 +1,16 @@
 # jikan
 
+
+## database
+
+```mysql -u root < jikan.sql```
+```mysql -u root < jikan_data.sql```
+
+
+# old
+
+
+
 | HTML | CSS | JS |
 |:----:|:---:|:--:|
 | Native 5.0  | 3   | Vanilla 2015 | 
