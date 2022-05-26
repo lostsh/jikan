@@ -1,5 +1,8 @@
 <?php
-require_once "../model/Product.php";
+
+// use include ! not require to allow import fail (juste for the insert script)
+include_once "../model/Product.php";
+include_once "model/Product.php";
 
 class Controller{
 
