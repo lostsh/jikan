@@ -68,7 +68,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            main();
+            //main();
         });
     </script>
 </body>

@@ -11,6 +11,8 @@ class Product extends Salable{
 
     private String $description = "";
 
+    private int $stock = 0;
+
     public function __construct(array $arguments = array()){
         if(!empty($arguments)){
             foreach ($arguments as $property => $argument) {
@@ -27,6 +29,8 @@ class Product extends Salable{
 
     public function getDescription(){ return $this->description; }
 
+    public function getStock(){ return $this->stock; }
+
     /**
      * Get the product under the form of a table row
      */
@@ -34,8 +38,10 @@ class Product extends Salable{
         return "
         <tr>
             <td><img src='".$this->url."' alt='Product figure'></td>
+            <td><div class='buttons'><button>-</button><button>+</button></div></td>
             <td>".$this->description."</td>
             <td>".$this->getPrice()." k$</td>
+            <td class='order stock'>0/".$this->getStock()."</td>
         </tr>";
     }
 }

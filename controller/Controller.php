@@ -1,8 +1,6 @@
 <?php
-
-// use include ! not require to allow import fail (juste for the insert script)
-include_once "../model/Product.php";
-include_once "model/Product.php";
+include "../connection.php";
+require_once($_SERVER['DOCUMENT_ROOT'].'/model/Product.php');
 
 class Controller{
 
@@ -12,8 +10,27 @@ class Controller{
 
     //private String $previousPage = "index.php";
 
+    private $pdo = null;
+
     private String $categorie = "";
 
+    private function __construct(){
+        include "../connection.php";
+        $this->pdo = $pdo;
+
+        $sql = "SELECT category.name AS category, `description`, `image`, prix, stock FROM products INNER JOIN category ON products.id_category = category.id;";
+        $query = $this->pdo->query($sql);
+
+        foreach($query as $row){
+            //if the category does not exist the create it
+            if($this->products[$row['category']] == null) 
+                $this->products[$row['category']] = array();
+            // save the product
+            array_push($this->products[$row['category']], new Product($row));
+        }
+    }
+
+    /*
     private function __construct(String $file){
         $data = json_decode(file_get_contents($file), true);
 
@@ -27,6 +44,11 @@ class Controller{
 
     public static function getController(String $file = "../products.json"){
         if(self::$that == null) self::$that = new Controller($file);
+        return self::$that;
+    }*/
+
+    public static function getController(){
+        if(self::$that == null) self::$that = new Controller();
         return self::$that;
     }
 
