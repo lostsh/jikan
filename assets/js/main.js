@@ -42,7 +42,7 @@ function main(){
 
 
     //start faking basket presence
-    basketFake();
+    //basketFake();
 }
 
 function basketFake(){

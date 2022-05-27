@@ -21,3 +21,10 @@ INSERT INTO `products` (`id_category`, `description`, `image`, `prix`, `stock`) 
 (3, 'A month', 'https://lostsh.github.io/jikan-media/fruits/normal/orange.gif', 27, 30),
 (3, 'One year', 'https://lostsh.github.io/jikan-media/fruits/normal/strawberry.gif', 332, 30),
 (3, 'You wake up when it suits you.', 'https://lostsh.github.io/jikan-media/fruits/normal/pac-man.gif', -666, 30);
+
+-- pass is : 1234
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES (NULL, 'red', 'str@wber.ry', '81dc9bdb52d04dc20036dbd8313ed055');
+-- pass is : Pass Word
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES (NULL, 'henry', 'henry@choum.su', '49283fc4fefdbbea56b0612f8ab8199a');
+-- pass is : azerty
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES (NULL, 'default', 'default@user.com', 'ab4f63f9ac65152575886860dde480a1') 
