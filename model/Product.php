@@ -22,6 +22,10 @@ class Product extends Salable{
                 $this->url = $this->image;
                 unset($this->image);
             }
+            if($this->prix != null){
+                $this->setPrice($this->prix);
+                unset($this->prix);
+            }
         }
     }
 
