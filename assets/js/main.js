@@ -71,14 +71,12 @@ function Object(row){
         this.name = row.querySelector('img').getAttribute('src');
         this.name = this.name.substring(this.name.lastIndexOf('/')+1, this.name.lastIndexOf('.'));
         this.id = this.row.id;
-        this.stock = 30;
+        this.stock = this.row.querySelector("td:nth-last-child(1)").textContent;
+        this.stock = this.stock.substring(this.stock.lastIndexOf('/')+1);
         this.order = 0;
-
-        // TODO : replace init by selecting row content
 
         //adding buttons
         var buttons = row.querySelector('.buttons');
-        console.log(buttons);
         var less = buttons.firstChild;
         less.addEventListener("click", this.removeFromCard);
         var more = buttons.lastChild;
@@ -96,9 +94,8 @@ function Object(row){
      * Update the order / stock column display
      */
     this.update = function(){
-        //this.row.querySelector("td:nth-last-child(1)").textContent = this.order+"/"+(this.stock-this.order);
+        this.row.querySelector("td:nth-last-child(1)").textContent = this.order+"/"+(this.stock-this.order);
         
-        console.log(this.id);
         console.log("Start requesting the dabase");
         //fetch('../model/getStock.php?action=get&id='+this.id)
         fetch('../model/getStock.php?stock='+(this.stock-this.order)+'&id='+this.id)
