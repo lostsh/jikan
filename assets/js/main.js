@@ -42,10 +42,10 @@ function main(){
 
 
     //start faking basket presence
-    //basketFake();
+    basket();
 }
 
-function basketFake(){
+function basket(){
     console.log("[+]\tStart faking the basket presence");
 
     var rows = Array.from(document.querySelectorAll("table tr"));
@@ -54,7 +54,7 @@ function basketFake(){
 
     for(var r of rows){
         var p = new Object(r);
-        p.init(30);
+        p.init();
     }
 }
 
@@ -67,32 +67,22 @@ function Object(row){
     this.row = row;
     var that = this;
 
-    this.init = function(initialStock){
+    this.init = function(){
         this.name = row.querySelector('img').getAttribute('src');
         this.name = this.name.substring(this.name.lastIndexOf('/')+1, this.name.lastIndexOf('.'));
-        this.stock = initialStock;
+        this.id = this.row.id;
+        this.stock = 30;
         this.order = 0;
 
-        //adding buttons
-        var colBtn = document.createElement("td");
-        var buttons = document.createElement("div");
-        buttons.className = "buttons"
-        var less = document.createElement("button");
-        less.addEventListener("click", this.removeFromCard);
-        var more = document.createElement("button");
-        more.addEventListener("click", this.addToCard);
-        less.textContent = "-";
-        more.textContent = "+";
-        buttons.appendChild(less);
-        buttons.appendChild(more);
-        colBtn.appendChild(buttons);
-        //put the buttons on the page
-        this.row.insertBefore(colBtn, row.querySelector(":nth-child(2)"));
+        // TODO : replace init by selecting row content
 
-        //adding order column
-        var col = document.createElement("td");
-        col.className = "order stock";
-        this.row.appendChild(col);
+        //adding buttons
+        var buttons = row.querySelector('.buttons');
+        console.log(buttons);
+        var less = buttons.firstChild;
+        less.addEventListener("click", this.removeFromCard);
+        var more = buttons.lastChild;
+        more.addEventListener("click", this.addToCard);
 
         //update the stock / order display
         this.update();
@@ -106,7 +96,18 @@ function Object(row){
      * Update the order / stock column display
      */
     this.update = function(){
-        this.row.querySelector("td:nth-last-child(1)").textContent = this.order+"/"+(this.stock-this.order);
+        //this.row.querySelector("td:nth-last-child(1)").textContent = this.order+"/"+(this.stock-this.order);
+        
+        console.log(this.id);
+        console.log("Start requesting the dabase");
+        //fetch('../model/getStock.php?action=get&id='+this.id)
+        fetch('../model/getStock.php?stock='+(this.stock-this.order)+'&id='+this.id)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(resp){
+            this.stock = resp;
+        });
     }
 
     this.addToCard = function(){
@@ -119,6 +120,10 @@ function Object(row){
         that.update();
     }
 }
+
+/**************
+ * Zoom popup *
+ **************/
 
 function zoom(e){
     var pop = document.querySelector("popup-zoom");

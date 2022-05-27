@@ -33,6 +33,8 @@ class Product extends Salable{
 
     public function getDescription(){ return $this->description; }
 
+    public function setStock(int $stock){ $this->stock = $stock; }
+
     public function getStock(){ return $this->stock; }
 
     /**
@@ -40,7 +42,7 @@ class Product extends Salable{
      */
     public function __toString(){
         return "
-        <tr>
+        <tr id='".$this->id."'>
             <td><img src='".$this->url."' alt='Product figure'></td>
             <td><div class='buttons'><button>-</button><button>+</button></div></td>
             <td>".$this->description."</td>

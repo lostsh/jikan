@@ -10,7 +10,7 @@ class Controller{
 
     //private String $previousPage = "index.php";
 
-    private $pdo = null;
+    public $pdo = null;
 
     private String $categorie = "";
 
@@ -18,7 +18,7 @@ class Controller{
         include($_SERVER['DOCUMENT_ROOT'].'/connection.php');
         $this->pdo = $pdo;
 
-        $sql = "SELECT category.name AS category, `description`, `image`, prix, stock FROM products INNER JOIN category ON products.id_category = category.id;";
+        $sql = "SELECT products.id, category.name AS category, `description`, `image`, prix, stock FROM products INNER JOIN category ON products.id_category = category.id;";
         $query = $this->pdo->query($sql);
         
         foreach($query as $row){
@@ -38,5 +38,17 @@ class Controller{
     public function setCategorie(String $categ){ $this->categorie = $categ; }
     public function getCurrentProducts(){ return $this->products[$this->categorie]; }
 
-    public function get(String $cat, int $index){ return $this->products[$cat][$index]; }
+    public function get(int $id){
+        foreach($this->products as $cat => $products){
+            foreach($products as $p){
+                if($p->id == $id){
+                    $sql = "SELECT stock FROM products WHERE id = ".$id.";";
+                    $query = $this->pdo->query($sql);
+                    foreach($query as $row) $p->setStock($row['stock']);
+                    return $p;
+                }
+            }
+        }
+        return null;
+    }
 }
