@@ -6,7 +6,7 @@
 
 ## API
 
-[Medias](lostsh.github.io/jikan-media/)
+[Medias](https://lostsh.github.io/jikan-media/)
 
 ## Annex
 Old and first version of the js glitch handler. Now the script loads glitch effect on row hover, the logic is pretty cool you can take a look at it `assets/js/main.js`.
