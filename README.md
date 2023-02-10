@@ -4,6 +4,10 @@
 |:----:|:---:|:--:|
 | Native 5.0  | 3   | Vanilla 2015 | 
 
+## API
+
+[Medias](lostsh.github.io/jikan-media/)
+
 ## Annex
 Old and first version of the js glitch handler. Now the script loads glitch effect on row hover, the logic is pretty cool you can take a look at it `assets/js/main.js`.
 ```js
